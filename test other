@@ -1,0 +1,529 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Press TAB to input a seed.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <title></title>
+
+  <meta name="theme-color" content="#512DA8">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#512DA8">
+
+  <link rel="shortcut icon" href="https://goo.gl/QANSrE">
+  <!-- https://goo.gl/QANSrE Monstro | https://goo.gl/gJqMZU Monstro II | https://goo.gl/8Y6drS Gish | https://goo.gl/yJRmkW Little Horn | https://goo.gl/8i5dga Isaac Steam Lv1 Coin -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-deep_orange.min.css">
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    #scroll-up-btn {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    z-index: 900;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;                                                              /* Removes the scrollbar */
+  }
+
+  .cursor .mdl-none {
+    cursor: default;                                                            /* Sets cursor to default */
+    pointer-events: none;                                                       /* Disables button action */
+  }
+
+  .no-copy {
+    -webkit-user-select: none;                                                  /* Chrome all / Safari all */
+    -moz-user-select: none;                                                     /* Firefox all */
+    -ms-user-select: none;                                                      /* IE 10+ */
+    user-select: none;                                                          /* Likely future */
+  }
+
+  .main {
+    margin-top: -35vh;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .header {
+    padding-left: 40px;
+    flex: 1 0 auto;
+  }
+
+  .container {
+    max-width: 1600px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+  }
+
+  .mdl-layout__header {
+    min-height:48px
+  }
+
+  .mdl-grid {
+    align-self: center;
+  }
+
+  .mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .mdl-card__actions > .mdl-button--icon {
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+
+  .devider {
+    min-height: 45px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .card {
+    height: 256px;
+    max-height: 512px;
+  }
+
+  .material-icons.md-light {
+    color: rgba(255, 255, 255, 1);		                                          /* Sets material icons to white */
+  }
+
+  .mdl-card__media > img {
+    max-width: 100%;
+    align: center;
+  }
+
+</style>
+
+<script>
+var scrollTo = function(top) {                                                  // Scroll to top script - start //
+  var content = $(".mdl-layout__content");
+  var target = top ? 0 : $(".page-content").height();
+  content.stop().animate({ scrollTop: target }, "slow");
+};
+
+var scrollToTop = function() {
+  scrollTo(true);
+};
+
+var scrollToBottom = function() {
+  scrollTo(false);
+};
+
+$(function() {
+  $("#scroll-up-btn").click(scrollToTop);
+  $("#scroll-down-btn").click(scrollToBottom);
+});                                                                             // Scroll to top script - end //
+
+</script>
+</head>
+
+<body class="no-copy cursor">
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Title</span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="test nintendo">Nintendo</a>
+        <a class="mdl-navigation__link" href="test playstation">PlayStation</a>
+        <a class="mdl-navigation__link" href="test other">Other</a>
+        <a class="mdl-navigation__link" href="test hardware">Hardware</a>
+      </nav>
+    </div>
+    </header>
+    <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a id="nintendo" class="mdl-navigation__link" href="test nintendo">Nintendo</a>
+      <div class="mdl-tooltip mdl-tooltip--large" for="nintendo">This is a test</div>
+      <br>
+      <a id="playstation" class="mdl-navigation__link" href="test playstation">PlayStation</a>
+      <div class="mdl-tooltip" for="playstation">This is a test</div>
+      <br>
+      <a id="other" class="mdl-navigation__link" href="test other">Other</a>
+      <div class="mdl-tooltip mdl-tooltip--large" for="other">This is a test</div>
+      <br>
+      <a id="hardware" class="mdl-navigation__link" href="test hardware">Hardware</a>
+      <div class="mdl-tooltip" for="hardware">This is a test</div>
+    </nav>
+  </div>
+
+    <main id="site-content" class="mdl-layout__content">
+
+        <div class="page-content">
+          <div class="container mdl-grid">
+
+            <div class="mdl-card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp">
+              <figure class="mdl-card__media mdl-color--white">
+                <img src="https://goo.gl/71Xk5z" alt="" /> <!-- NGAGE -->
+              </figure>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Crash Nitro Cart</b><br>Nokia N-Gage</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Vicarious Visions</b><br>First released: <b>June 30 2004</b><br>Average score: <b>064/100</b><br>Genre(s): <b>Racing</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>The Elder Scrolls Travels: Shadowkey</b><br>Nokia N-Gage</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Vir2L Studios, TKO Software</b><br>First released: <b>November 11 2004</b><br>Average score: <b>055/100</b><br>Genre(s): <b>RPG</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Tony Hawk's Pro Skater</b><br>Nokia N-Gage</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Neversoft, IdeaWorks3D</b><br>First released: <b>October 10 2003</b><br>Average score: <b>092/100 (PS)</b><br>Genre(s): <b>Sports</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp">
+              <figure class="mdl-card__media mdl-color--white">
+                <img src="https://goo.gl/PJPNhU" alt="" /> <!-- SATURN -->
+              </figure>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Command & Conquer</b><br>Sega Saturn</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Westwood Studios</b><br>First released: <b>December 6 1996</b><br>Average score: <b>094/100 (PC)</b><br>Genre(s): <b>RTS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp">
+              <figure class="mdl-card__media mdl-color--white">
+                <img src="https://goo.gl/knd4Lx" alt="" /> <!-- X360 -->
+              </figure>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Call of Duty: Black Ops III</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Treyarch</b><br>First released: <b>November 6 2015</b><br>Average score: <b>079/100</b><br>Genre(s): <b>FPS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Command & Conquer 3: Tiberium Wars</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>EA Los Angeles</b><br>First released: <b>May 10 2007</b><br>Average score: <b>082/100</b><br>Genre(s): <b>RTS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Fable III</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Lionhead Studios</b><br>First released: <b>October 26 2010</b><br>Average score: <b>080/100</b><br>Genre(s): <b>Action, RPG</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                  </td>
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Gears of War 3</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Epic Games</b><br>First released: <b>September 20 2011</b><br>Average score: <b>091/100</b><br>Genre(s): <b>Third-Person Shooter</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Halo: Combat Evolved Anniversary</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>343 Industries, Saber Interactive</b><br>First released: <b>November 15 2011</b><br>Average score: <b>082/100</b><br>Genre(s): <b>FPS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Halo 3</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Bungie</b><br>First released: <b>September 26 2007</b><br>Average score: <b>094/100</b><br>Genre(s): <b>FPS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Halo 4</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>343 Industries</b><br>First released: <b>November 6 2012</b><br>Average score: <b>087/100</b><br>Genre(s): <b>FPS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Halo Reach</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Bungie</b><br>First released: <b>September 14 2010</b><br>Average score: <b>091/100</b><br>Genre(s): <b>FPS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <!-- <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--hide-phone mdl-shadow--2dp mdl-color--primary-dark card"></div> -->
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Halo Wars</b><br>Xbox 360</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Ensemble Studios</b><br>First released: <b>February 26 2009</b><br>Average score: <b>082/100</b><br>Genre(s): <b>RTS</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp">
+              <figure class="mdl-card__media mdl-color--white">
+                <img src="https://goo.gl/QZ5D5H" alt="" /> <!-- XB1 -->
+              </figure>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Rare Replay</b><br>Xbox One</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Developer: <b>Rare</b><br>First released: <b>August 4 2015</b><br>Average score: <b>084/100</b><br>Genre(s): <b>Compilation</b></p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+
+                <a style="width:500px; text-align:center;">
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">person</i></button> <!-- Single Player -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">weekend</i></button> <!-- Local Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">people</i></button> <!-- Online Miltiplayer -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none"><i class="material-icons">language</i></button> <!-- Network Features -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">cast</i></button> <!-- Remote Play -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">hdr_on</i></button> <!-- HDR Support -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">new_releases</i></button> <!-- PS4 Pro/One X Enhanced -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">tap_and_play</i></button> <!-- Phone/Tablet Controller -->
+                  <button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-none" disabled><i class="material-icons">local_atm</i></button> <!-- Microtransactions -->
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+    </main>
+
+    <a id="scroll-up-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"><i class="material-icons md-light">expand_less</i></a>
+
+    <footer class="mdl-mega-footer mdl-cell--hide-tablet mdl-cell--hide-phone">
+    </footer>
+  </div>
+
+</body>
+
+<!-- &nbsp; --> <!-- blank character -->
+
+</html>
