@@ -1,0 +1,464 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Press TAB to input a seed.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <title></title>
+
+  <meta name="theme-color" content="#512DA8">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#512DA8">
+
+  <link rel="shortcut icon" href="https://goo.gl/QANSrE">
+  <!-- https://goo.gl/QANSrE Monstro | https://goo.gl/gJqMZU Monstro II | https://goo.gl/8Y6drS Gish | https://goo.gl/yJRmkW Little Horn | https://goo.gl/8i5dga Isaac Steam Lv1 Coin -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-deep_orange.min.css">
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+  #scroll-up-btn {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    z-index: 900;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;                                                              /* Removes the scrollbar */
+  }
+
+  .cursor .mdl-none {
+    cursor: default;                                                            /* Sets cursor to default */
+    pointer-events: none;                                                       /* Disables button action */
+  }
+
+  .no-copy {
+    -webkit-user-select: none;                                                  /* Chrome all / Safari all */
+    -moz-user-select: none;                                                     /* Firefox all */
+    -ms-user-select: none;                                                      /* IE 10+ */
+    user-select: none;                                                          /* Likely future */
+  }
+
+  .main {
+    margin-top: -35vh;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .header {
+    padding-left: 40px;
+    flex: 1 0 auto;
+  }
+
+  .container {
+    max-width: 1600px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+  }
+
+  .mdl-layout__header {
+    min-height:48px
+  }
+
+  .mdl-grid {
+    align-self: center;
+  }
+
+  .mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .mdl-card__actions > .mdl-button--icon {
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+
+  .devider {
+    min-height: 45px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .card {
+    height: 256px;
+    max-height: 512px;
+  }
+
+  .material-icons.md-light {
+    color: rgba(255, 255, 255, 1);		                                          /* Sets material icons to white */
+  }
+
+  .mdl-card__media > img {
+    max-width: 100%;
+    align: center;
+  }
+
+</style>
+</head>
+
+<body class="no-copy cursor">
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <!-- <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Title</span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="test nintendo.html">Nintendo</a>
+        <a class="mdl-navigation__link" href="test playstation.html">PlayStation</a>
+        <a class="mdl-navigation__link" href="test other.html">Other</a>
+        <a class="mdl-navigation__link" href="test hardware.html">Hardware</a>
+      </nav>
+    </div>
+    </header>
+    <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a id="nintendo" class="mdl-navigation__link" href="test nintendo.html">Nintendo</a>
+      <div class="mdl-tooltip mdl-tooltip--large" for="nintendo">This is a test</div>
+      <br>
+      <a id="playstation" class="mdl-navigation__link" href="test playstation.html">PlayStation</a>
+      <div class="mdl-tooltip" for="playstation">This is a test</div>
+      <br>
+      <a id="other" class="mdl-navigation__link" href="test other.html">Other</a>
+      <div class="mdl-tooltip mdl-tooltip--large" for="other">This is a test</div>
+      <br>
+      <a id="hardware" class="mdl-navigation__link" href="test hardware.html">Hardware</a>
+      <div class="mdl-tooltip" for="hardware">This is a test</div>
+    </nav>
+  </div> -->
+
+    <main id="site-content" class="mdl-layout__content">
+
+        <div class="page-content">
+          <div class="container mdl-grid">
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>The PlayStation is a home video game console developed and marketed by Sony Computer Entertainment. The console was released on 3rd December 1994 in Japan, 9th September 1995 in North America, 29th September 1995 in Europe.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_(console)">SCPH-7502</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation One</b><br>PSOne</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>On July 7th 2000, Sony released the PS one, a smaller redesign of the original PlayStation.<br>It was the highest-selling console through the end of the year, outselling all other consoles - including Sony's own PlayStation 2.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_(console)#PS_one">SCPH-102</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation 2</b><br>PS2 Slim</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>The PlayStation 2 is a home video game console developed by Sony Computer Entertainment.<br>It was released on March 4th 2000 in Japan, October 26th 2000 in North America and November 24th, 2000 in Europe.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_2">SCPH-90004</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation 3</b><br>PS3 Slim</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>The PlayStation 3 is a home video game console developed by Sony Computer Entertainment.<br>It was first released on November 11th 2006 in Japan, November 17th 2006 in North America and March 23td 2007 in Europe.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_3#Slim_model_and_rebranding">CECH-2004A</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation 4</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation 4 is a home video game console developed by Sony Interactive Entertainment.<br>It was launched on November 15th 2013 in North America, November 29th 2013 in Europe and Australia and February 22nd 2014 in Japan.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_4">CHU-1003A</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation 4 Pro</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation 4 Pro was launched worldwide on November 10th 2016. It is an upgraded version of the PlayStation 4 with improved hardware to enable 4K rendering. Games may be optimized for higher graphics quality, resolution, or HDR support on PS4 Pro.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_4#PlayStation_4_Pro">CUH-7016B</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation VR</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>The PlayStation VR is a virtual reality headset developed by Sony Interactive Entertainment. It was designed to be fully functional with the PlayStation 4. The headset also has a processor box which enables Social Screen video output to the television.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_4#PlayStation_VR">CUH-ZVR1</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation Portable</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>The PlayStation Portable is a handheld game console developed by Sony Computer Entertainment.<br>The system was released on December 12th 2004 in Japan, March 24th 2005 in North America and September 1st 2005 in Europe.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_Portable">PSP-1004</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation Vita</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>The PlayStation Vita is a handheld game console developed and released by Sony Computer Entertainment. It was released on December 17th 2011 in Japan, with releases in North America, Europe, and other worldwide regions starting February 22nd 2012.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_Vita">PCH-1004</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>PlayStation TV</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/PlayStation_Vita#PlayStation_TV">VTE-1016</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Nintendo GameCube</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/GameCube">DOL-001 (EUR)</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Nintendo Wii</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Wii">RVL-001 (EUR)</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Nintendo Wii U</b><br>Premium</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Wii_U">WUP-101(03)</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Nintendo Switch</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Nintendo_Switch">HAC-001</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>GameBoy Color</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Game_Boy_Color">CGB-001</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>GameBoy Advance</b><br>AGS-101 screen mod</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Game_Boy_Advance">AGB-001</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>GameBoy Advance SP</b><br>NES Model</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Game_Boy_Advance_SP">AGS-001</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>GameBoy Micro</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Game_Boy_Micro">OXY-001</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Nintendo DS Lite</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Nintendo_DS_Lite">USG-001</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Nintendo DSi</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Nintendo_DSi">TWL-001 (EUR)</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Nintendo 3DS XL</b><br>Blue Pokémon X&Y Edition</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Nintendo_3DS">SPR-001 (EUR)</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>NEW Nintendo 3DS</b><br>&nbsp;</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/New_Nintendo_3DS">KTR-001</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+            <div class="mdl-card mdl-cell mdl-cell-phone mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp card">
+              <div class="mdl-card__title">
+                <h7 class="mdl-card__subtitle-text game"><b>Xbox 360</b><br>Slim</h7>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>PlayStation TV is a microconsole, and a non-handheld variant of the PlayStation Vita handheld game console. It was released on November 14th 2013 in Japan, October 14th 2014 in North America, November 14th 2014 in Europe and Australia.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border devider">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://en.wikipedia.org/wiki/Xbox_360">Model 1439</a>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </main>
+
+    <a id="scroll-up-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"><i class="material-icons md-light">expand_less</i></a>
+
+    <footer class="mdl-mega-footer mdl-cell--hide-tablet mdl-cell--hide-phone">
+    </footer>
+  </div>
+
+</body>
+
+<!-- &nbsp; --> <!-- blank character -->
+
+</html>
