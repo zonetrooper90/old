@@ -3,22 +3,17 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="01001001 01110100 00100111 01110011 00100000 01100001 00100000 01110100 01110010 01100001 01110000 00100001">
+<!-- <meta charset="utf-8"> -->
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<!-- <meta name="description" content="01001001 01110100 00100111 01110011 00100000 01100001 00100000 01110100 01110010 01100001 01110000 00100001"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <title>Movies</title>
-
-<meta name="theme-color" content="#000080">
-<meta name="apple-mobile-web-app-status-bar-style" content="#000080">
-
-<link rel="shortcut icon" href="https://goo.gl/QANSrE">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
-<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 <link rel="stylesheet" href="sortable.min.css" />
+<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 <script src="sortable.min.js"></script>
 
 <style>
@@ -34,14 +29,14 @@
 
 .main {
   /* margin-top: -5vh; */
-  /* -webkit-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
-  flex-shrink: 0; */
+  flex-shrink: 0;
 }
 
-.header .mdl-layout__header-row {
+/* .header .mdl-layout__header-row {
   padding-left: 40px;
-}
+} */
 
 .container {
   max-width: 1600px;
@@ -57,11 +52,8 @@
 
 .layout.is-small-screen .content {
   padding: 15px 25px;
+  width: calc(100% - 15px);
 }
-
-/* .content h3 {
-  margin-top: 48px;
-} */
 
 .material-icons.grey600 {
     color: lightgray
@@ -82,20 +74,70 @@ display: none;              /* Removes the scrollbar */
 user-select: none;          /* Likely future */
 }
 
+.mdl-data-table__cell--non-numeric {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.mdl-data-table__cell--non-numeric.scroll {
+  position: relative;
+  white-space: pre-wrap;
+  transform: translateX(0);
+  transition: 5s;
+}
+
+/* .mdl-data-table__cell--non-numeric.scroll:hover {
+  transform: translateX(calc(200px - 100%));
+} */
+
+/* #my-table td, th {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: hidden;
+  -o-text-overflow: hidden;
+} */
+
+/* td. {
+  position:absolute;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  white-space:nowrap;
+  display:inline-block;
+}
+
+td:hover {
+  animation-name: scroll;
+  animation-duration: 6s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+
+
+
 </style>
 
 </head>
 
 <body class="cursor no-copy">
 <div class="layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-<div class="cell"></div>
-<div class="ribbon"></div>
 <main class="main mdl-layout__content">
 <div class="container mdl-grid">
 <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-<div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+<div class="content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
 <p>
-<table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp sortable">
+<table class="mdl-data-table mdl-shadow--2dp sortable">
 <thead>
 <tr>
 <th width="100%" class="mdl-data-table__cell--non-numeric">Movie</th>
@@ -124,7 +166,7 @@ user-select: none;          /* Likely future */
 <td>1h 39min</td> <!-- blanket -->
 </tr>
 <tr>
-<td class="mdl-data-table__cell--non-numeric">Family Guy: Something, Something, Something, Dark Side</td> <!-- artikel -->
+<td class="mdl-data-table__cell--non-numeric scroll">Family Guy: Something, Something, Something, Dark Side</td> <!-- artikel -->
 <td>DVD</td> <!-- vidensbasen -->
 <td>0h 55min</td> <!-- blanket -->
 </tr>
@@ -145,12 +187,8 @@ user-select: none;          /* Likely future */
 
 <!-- tool tips -->
 <div class="mdl-tooltip" for="tt-timeall">Kun til intern brug i KBS</div>
-<div class="mdl-tooltip" for="tt-skat">72 22 18 18</div>
-<div class="mdl-tooltip" for="tt-fr">36 66 68 88<br>33 66 10 09<br>33 66 10 12</div>
-<div class="mdl-tooltip" for="tt-raportal">RA-support: +45 44 82 79 75<br>Mandag - Fredag: 08:30 - 16:30</div>
-<div class="mdl-tooltip" for="tt-selvbetjening.nu">Bruger: bib@kk.dk<br>Kode: 12345</div>
 </body>
 
-<!-- sortable - a tiny, vanilla JS table sorter: https://github.com/tofsjonas/sortable -->
+<!-- sortable - a tiny, vanilla JS table sorter: https://github.com/kudlas/sortable -->
 
 </html>
