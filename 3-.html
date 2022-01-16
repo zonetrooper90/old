@@ -75,56 +75,9 @@ user-select: none;          /* Likely future */
 }
 
 .mdl-data-table__cell--non-numeric {
-  table-layout: fixed;
-  border-collapse: collapse;
+  white-space: normal;
   width: 100%;
-  max-width: 200px;
-  overflow: hidden;
 }
-
-.mdl-data-table__cell--non-numeric.scroll {
-  position: relative;
-  white-space: pre-wrap;
-  transform: translateX(0);
-  transition: 5s;
-}
-
-/* .mdl-data-table__cell--non-numeric.scroll:hover {
-  transform: translateX(calc(200px - 100%));
-} */
-
-/* #my-table td, th {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: hidden;
-  -o-text-overflow: hidden;
-} */
-
-/* td. {
-  position:absolute;
-  overflow-x:hidden;
-  overflow-y:hidden;
-  white-space:nowrap;
-  display:inline-block;
-}
-
-td:hover {
-  animation-name: scroll;
-  animation-duration: 6s;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */
-
-
-
 
 </style>
 
@@ -140,7 +93,7 @@ td:hover {
 <table class="mdl-data-table mdl-shadow--2dp sortable">
 <thead>
 <tr>
-<th width="100%" class="mdl-data-table__cell--non-numeric">Movie</th>
+<th class="mdl-data-table__cell--non-numeric">Movie</th>
 <th>Format</th>
 <th>Runtime</th>
 </tr>
@@ -166,14 +119,19 @@ td:hover {
 <td>1h 39min</td> <!-- blanket -->
 </tr>
 <tr>
-<td class="mdl-data-table__cell--non-numeric scroll">Family Guy: Something, Something, Something, Dark Side</td> <!-- artikel -->
+<td class="mdl-data-table__cell--non-numeric">Family Guy: Something, Something, Something, Dark Side</td> <!-- artikel -->
 <td>DVD</td> <!-- vidensbasen -->
 <td>0h 55min</td> <!-- blanket -->
 </tr>
 <tr>
-<td class="mdl-data-table__cell--non-numeric">I Kongens Klæ'r</td> <!-- artikel -->
-<td>VHS</td> <!-- vidensbasen -->
-<td>1h 41min</td> <!-- blanket -->
+<td class="mdl-data-table__cell--non-numeric">AaaaaAAaaaAAAaaAAAAaAAAAA!!! for the Awesome</td> <!-- artikel -->
+<td>Steam</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">2064: Read Only Memories</td> <!-- artikel -->
+<td>PlayStation 4</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
 </tr>
 </tbody>
 </table>
