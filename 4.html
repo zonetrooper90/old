@@ -1,0 +1,176 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Movies</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+<link rel="stylesheet" href="sortable.min.css" />
+<script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+<script src="sortable.min.js"></script>
+
+<style>
+
+/* .ribbon {
+  width: 100%;
+  height: 5vh;
+  background-color: #000080;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+} */
+
+.main {
+  /* margin-top: -5vh; */
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+/* .header .mdl-layout__header-row {
+  padding-left: 40px;
+} */
+
+.container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+}
+
+.content {
+  border-radius: 25px;
+  /* padding: 10px 25px; */
+  /* margin-bottom: 80px; */
+  /* margin-top: 5px; */
+  /* margin-left: 5px;
+  margin-right: 5px; */
+  background-color: #0D47A1;                                                  /* material blue 900 */
+}
+
+.layout.is-small-screen .content {
+  /* padding: 15px 25px; */
+  width: calc(100% - 15px);
+  /* margin-top: 5px;
+  margin-left: 5px; */
+  margin-right: 5px;
+}
+
+.material-icons.grey600 {
+    color: lightgray
+}
+
+.cursor {
+    cursor: default;
+}
+
+::-webkit-scrollbar {
+display: none;              /* Removes the scrollbar */
+}
+
+.no-copy {
+-webkit-user-select: none;  /* Chrome all / Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+user-select: none;          /* Likely future */
+}
+
+.mdl-data-table__cell--non-numeric {
+  white-space: normal;
+  width: 100%;
+}
+
+</style>
+
+</head>
+
+<body class="cursor no-copy content">
+<div class="layout mdl-layout mdl-js-layout">
+<main class="main mdl-layout__content">
+<div class="container"> <!-- removed mdl-grid -->
+<!-- <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div> -->
+<!-- <div class="content mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"> -->
+<p>
+<table class="mdl-data-table mdl-shadow--2dp sortable">
+<thead>
+<tr>
+<th class="mdl-data-table__cell--non-numeric">Movie</th>
+<th>Format</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">The Lego Batman Movie</td> <!-- artikel -->
+<td>Blu-ray</td> <!-- vidensbasen -->
+<td>1h 40min</td> <!-- blanket -->
+</tr>
+<td class="mdl-data-table__cell--non-numeric">Scott Pilgrim vs. The World</td> <!-- artikel -->
+<td>DVD</td> <!-- vidensbasen -->
+<td>1h 52min</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">Summer Wars</td> <!-- artikel -->
+<td>VHS</td> <!-- vidensbasen -->
+<td>1h 49min</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">Ashens and the Polybius Heist</td> <!-- artikel -->
+<td>Blu-ray</td> <!-- vidensbasen -->
+<td>1h 39min</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">Family Guy: Something, Something, Something, Dark Side</td> <!-- artikel -->
+<td>DVD</td> <!-- vidensbasen -->
+<td>0h 55min</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">AaaaaAAaaaAAAaaAAAAaAAAAA!!! for the Awesome</td> <!-- artikel -->
+<td>Steam</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">2064: Read Only Memories</td> <!-- artikel -->
+<td>PlayStation 4</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">2064: Read Only Memories</td> <!-- artikel -->
+<td>PlayStation Vita</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">2064: Read Only Memories</td> <!-- artikel -->
+<td>Steam</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">Test spil</td> <!-- artikel -->
+<td>Steam, PlayStation 4</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">Test spil</td> <!-- artikel -->
+<td>Steam<br>PlayStation 4</td> <!-- vidensbasen -->
+<td>Digital</td> <!-- blanket -->
+</tr>
+</tbody>
+</table>
+</p>
+<!-- Beboerindskudslån -->
+
+<!-- </div> -->
+</div>
+</main>
+</div>
+
+<!-- tool tips -->
+<div class="mdl-tooltip" for="tt-timeall">Kun til intern brug i KBS</div>
+</body>
+
+<!-- sortable - a tiny, vanilla JS table sorter: https://github.com/kudlas/sortable -->
+
+</html>
