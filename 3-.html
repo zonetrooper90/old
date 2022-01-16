@@ -23,20 +23,20 @@
 
 <style>
 
-.ribbon {
+/* .ribbon {
   width: 100%;
-  height: 40vh;
+  height: 5vh;
   background-color: #000080;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-}
+} */
 
 .main {
-  margin-top: -35vh;
-  -webkit-flex-shrink: 0;
+  /* margin-top: -5vh; */
+  /* -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+  flex-shrink: 0; */
 }
 
 .header .mdl-layout__header-row {
@@ -59,17 +59,9 @@
   padding: 15px 25px;
 }
 
-.content h3 {
+/* .content h3 {
   margin-top: 48px;
-}
-
-.footer {
-  padding-left: 40px;
-}
-
-.footer .mdl-mini-footer--link-list a {
-  font-size: 13px;
-}
+} */
 
 .material-icons.grey600 {
     color: lightgray
@@ -90,7 +82,6 @@ display: none;              /* Removes the scrollbar */
 user-select: none;          /* Likely future */
 }
 
-
 </style>
 
 </head>
@@ -103,15 +94,11 @@ user-select: none;          /* Likely future */
 <div class="container mdl-grid">
 <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
 <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-<!-- <div class="crumbs mdl-color-text--grey-500">
-Borgerservice &gt; Sundby &gt; Nyttige Links
-</div>
-<h4>Borgerservice - Backoffice</h4> -->
 <p>
 <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp sortable">
 <thead>
 <tr>
-<th width="100%" class="mdl-data-table__cell--non-numeric no-sort">Movie</th>
+<th width="100%" class="mdl-data-table__cell--non-numeric">Movie</th>
 <th>Format</th>
 <th>Runtime</th>
 </tr>
@@ -131,74 +118,30 @@ Borgerservice &gt; Sundby &gt; Nyttige Links
 <td>VHS</td> <!-- vidensbasen -->
 <td>1h 49min</td> <!-- blanket -->
 </tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">Ashens and the Polybius Heist</td> <!-- artikel -->
+<td>Blu-ray</td> <!-- vidensbasen -->
+<td>1h 39min</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">Family Guy: Something, Something, Something, Dark Side</td> <!-- artikel -->
+<td>DVD</td> <!-- vidensbasen -->
+<td>0h 55min</td> <!-- blanket -->
+</tr>
+<tr>
+<td class="mdl-data-table__cell--non-numeric">I Kongens Klæ'r</td> <!-- artikel -->
+<td>VHS</td> <!-- vidensbasen -->
+<td>1h 41min</td> <!-- blanket -->
+</tr>
 </tbody>
 </table>
 </p>
 <!-- Beboerindskudslån -->
-<p>
-<table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp sortable">
-<thead>
-<tr>
-<th width="100%" class="mdl-data-table__cell--non-numeric">Flexhandicap / Flextrafik</th>
-<th>Blanket</th>
-<th>Vidensbasen</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="mdl-data-table__cell--non-numeric"><a href="https://www.kk.dk/indhold/soeg-om-handicapkoersel-flextrafik">Søg om handicapkørsel</a></td> <!-- artikel -->
-<td><a href="https://www.moviatrafik.dk/media/4592/ansoegningsskema-februar2016.pdf"><i class="material-icons">attachment</i></a></td> <!-- blanket -->
-<td><a href="http://kk.spitzeco.dk/Article/1/2/2147"><i class="material-icons">school</i></a></td> <!-- vidensbasen -->
-</tr>
-<tr>
-<td class="mdl-data-table__cell--non-numeric"><a href="https://www.kk.dk/indhold/soeg-om-handicapkoersel-flextrafik">Ansøgning om ekstra ture</a></td> <!-- artikel -->
-<td><a href="https://www.moviatrafik.dk/media/4901/ansoegning-om-tillaeg-til-flexhandicap-2016.pdf"><i class="material-icons">attachment</i></a></td> <!-- blanket -->
-<td><i class="material-icons grey600">school</i></td> <!-- vidensbasen -->
-</tr>
-</tbody>
-</table>
-</p>
-<!-- Flextrafik -->
-<p>
-<table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp sortable">
-<thead>
-<tr>
-<th width="100%" class="mdl-data-table__cell--non-numeric">Ægteskab / Vielse</th>
-<th>Blanket</th>
-<th>Vidensbasen</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="mdl-data-table__cell--non-numeric"><a href="http://www.kk.dk/indhold/vielse">Ægteskabserklæring</a></td> <!-- artikel -->
-<td><a href="http://www.klxml.dk/KLB/Blanket/Gaelder/vi001.pdf"><i class="material-icons">attachment</i></a></td> <!-- blanket -->
-<td><a href="http://kk.spitzeco.dk/Article/1/2/848"><i class="material-icons">school</i></a></td> <!-- vidensbasen -->
-</tr>
-<tr>
-<td class="mdl-data-table__cell--non-numeric"><a href="https://international.kk.dk/marriedincph">Notice of marriage</a></td> <!-- artikel -->
-<td><a href="http://international.kk.dk/sites/international.kk.dk/files/Notice%20of%20Marriage%202015.pdf"><i class="material-icons">attachment</i></a></td> <!-- blanket -->
-<td><i class="material-icons grey600">school</i></td> <!-- vidensbasen -->
-</tr>
-<tr>
-<td class="mdl-data-table__cell--non-numeric"><a href="https://www.borger.dk/familie-og-boern/navne-og-navneaendring/navneaendring">Navneændring på bryllupsdagen</a></td> <!-- artikel -->
-<td><a href="https://www.personregistrering.dk/fileadmin/pdfs/print/Navneaendringbryllupsdag.pdf"><i class="material-icons">attachment</i></a></td> <!-- blanket -->
-<td><a href="http://kk.spitzeco.dk/Article/1/2/886"><i class="material-icons">school</i></a></td> <!-- vidensbasen -->
-</tr>
-<tr>
-<td class="mdl-data-table__cell--non-numeric"><a href="https://www.kk.dk/artikel/aendring-af-registreret-partnerskab-til-aegteskab">Ændring af registreret partnerskab</a></td> <!-- artikel -->
-<td><a href="https://www.kk.dk/sites/default/files/Omdannelse%20af%20registreret%20partnerskab%20til%20%C3%A6gteskab%20-%20blanket.pdf"><i class="material-icons">attachment</i></a></td> <!-- blanket -->
-<td><i class="material-icons grey600">school</i></td> <!-- vidensbasen -->
-</tr>
-</tbody>
-</table>
-</p>
-<!-- Ægteskab/Vielse -->
 
 </div>
 </div>
 </main>
 </div>
-<!-- <a href="https://kk.spitzeco.dk/" target="_top" id="responza" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Responza</a> -->
 
 <!-- tool tips -->
 <div class="mdl-tooltip" for="tt-timeall">Kun til intern brug i KBS</div>
@@ -207,5 +150,7 @@ Borgerservice &gt; Sundby &gt; Nyttige Links
 <div class="mdl-tooltip" for="tt-raportal">RA-support: +45 44 82 79 75<br>Mandag - Fredag: 08:30 - 16:30</div>
 <div class="mdl-tooltip" for="tt-selvbetjening.nu">Bruger: bib@kk.dk<br>Kode: 12345</div>
 </body>
+
+<!-- sortable - a tiny, vanilla JS table sorter: https://github.com/tofsjonas/sortable -->
 
 </html>
